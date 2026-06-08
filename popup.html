@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { width: 300px; padding: 10px; font-family: sans-serif; }
+    textarea { width: 100%; height: 80px; margin-bottom: 10px; }
+    input, select { width: 100%; margin-bottom: 10px; padding: 5px; }
+    button { width: 100%; margin-bottom: 5px; cursor: pointer; }
+    #resultado { margin-top: 10px; white-space: pre-wrap; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <h3>Profile Settings</h3>
+  <textarea id="curriculo" placeholder="Paste your resume here..."></textarea>
+  <textarea id="regras" placeholder="Define your rules..."></textarea>
+  
+  <label>Google Gemini Configuration:</label>
+  <input type="password" id="geminiKey" placeholder="AIza...">
+	<select id="geminiModelSelect">
+    <option value="">Select a model</option>
+    <option value="gemini-3.5-flash">Gemini 3.5 Flash</option>
+    <option value="gemini-3.1-flash-lite">Gemini 3.1 Flash-Lite</option>
+  </select>
+  
+  <label>OpenAI Configuration:</label>
+  <input type="password" id="openaiKey" placeholder="sk-...">
+	<select id="openaiModelSelect">
+		<option value="">Select a model</option>
+		<option value="gpt-4o-mini">GPT-4o mini</option>
+		<option value="gpt-3.5-turbo">GPT-3.5 Turbo</option>
+	</select>
+  
+  <button id="salvar">Save Context</button>
+  <hr>
+  <button id="analisarGemini">Analyze with Gemini</button>
+  <button id="analisarOpenAI">Analyze with OpenAI</button>
+  
+  <div id="resultado"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
